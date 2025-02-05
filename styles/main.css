@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dancing+Script:wght@400..700&family=Fjalla+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 0 4px 10px #1db6f8;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    padding: 0 30px;
+    font-size: 20px;
+    color: #000;
+    text-shadow: 5px 5px 5px #1db6f8;
+}
+
+.navbar nav a:hover {
+    color: #1db6f8;
+    font-size: 25px;
+}
+
+/* General page divs */
+.content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* scroll-margin-top: 12vh; */
+    box-sizing: border-box;
+    /* margin-bottom: 12vh; */
+}
+
+.content#landing-screen {
+	height: calc(100vh - 12vh);
+    margin-top: 12vh; 
+    padding-top: 0;
+    background-image: url('../img/cover.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+	flex: content;
+	justify-content: center;
+	align-items: center;
+}
+
+#landing-screen h1 {
+	font-size: 5rem;
+	color: #fff;
+	text-shadow: 5px 5px 5px #000;
+}
+
+#landing-screen p {
+	font-size: 3rem;
+	color: #fff;
+	text-shadow: 5px 5px 5px #1db6f8;
+	font-family: "Dancing Script", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+.about {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 30%;
+}
+
+/* Accordion Styling */
+.container {
+
+    --light: #ffe6e6;
+	--dark: #0c0c0c;
+
+	overflow: clip;
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 2rem 5rem;
+
+	width: 100%;
+	height: 70%;
+	background-image: var(--bg-color);
+}
+
+.category_container {
+	--gap: 0.5rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+	gap: calc(var(--gap) * 2);
+
+	width: 100%;
+	height: 100%;
+}
+
+.acc-content {
+	--active: 0;
+
+	cursor: pointer;
+	overflow: clip;
+
+	position: relative;
+	z-index: 10;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 1.5rem;
+
+	padding: 2.5rem;
+
+	width: calc((100% / 3) - var(--gap));
+	height: 100%;
+
+	border-radius: 1rem;
+
+	transition: width 0.5s ease-in-out;
+}
+.acc-content:hover {
+	--active: 1;
+
+	width: calc(70% - var(--gap));
+}
+.acc-content::before {
+	content: "";
+
+	position: absolute;
+	z-index: -10;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+	background-color: var(--dark);
+
+	opacity: 0.6;
+}
+
+.acc-content img {
+	position: absolute;
+	z-index: -20;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+	object-position: center;
+}
+
+.acc-content .profile_image {
+	opacity: calc(1 - var(--active));
+
+	transition: opacity 0.3s ease-in-out;
+}
+
+.profile_detail {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+
+	width: 12rem;
+	transition: transform 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s;
+}
+
+.profile_detail span {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: var(--light);
+	text-wrap: nowrap;
+}
+
+.profile_detail p {
+	font-size: 0.75rem;
+	font-weight: 500;
+	color: var(--light);
+}
+
+.profile_quote {
+	width: 22rem;
+	transform: translate(0, calc((1 - var(--active)) * (100% + 2.5rem)));
+}
+
+.profile_quote p {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: var(--light);
+
+	transform: translate(0, calc((1 - var(--active)) * (100% + 2.5rem)));
+
+	transition: transform 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.1s;
+}
+
+/* //
+//	create an 'accordion' wrapper for the quote text 
+//	1 set initial height to zero fr  
+//	2 add overflow hidden to hide quote text 
+//	3 add transtion for grid-template-rows
+//  */
+.wrapper {
+	display: grid;
+  	grid-template-rows: 0fr;
+  	overflow: hidden;
+	transition: grid-template-rows 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s;
+}
+
+/* //
+//  add min-height 0 on the quote text to override the 
+// 	default max-content of fr - add a bit of individual
+//. animation for the quote (to not follow detail)
+//  */
+.profile_quote { 
+	min-height: 0; 
+	transform: translateY(50%);
+	opacity: 0;
+	transition: 
+		opacity 0.8s ease-in-out,
+		transform 0.8s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s
+	;	
+}
+
+/* // 	expand (animated) wrapper row height to 1 fr
+//	(this will animate detail up when making room for quote) */
+.acc-content:hover .wrapper {
+  	grid-template-rows: 1fr;
+}
+
+/* // remove translate to male quote slide in  */
+.acc-content:hover .profile_quote {
+	transform: none;
+	opacity: 1;	
+}
