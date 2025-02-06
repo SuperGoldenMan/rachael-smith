@@ -4,28 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rachael's Art & Design</title>
+    <!-- my style sheets -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/accordion.css">
+    <link rel="stylesheet" href="styles/slider.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick CSS (for styling) -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <!-- Slick JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </head>
 <body>
     <header class="navbar">
         <nav id="navigation-scrolling">
             <ul>
-                <li><a href="#home-screen">Home</a></li>
-                <li><a href="about"></a></li>
-                <li><a href="portfolio"></a></li>
-                <li><a href="#contact-screen">Contact</a></li>
+                <li><a href="#landing-screen">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#originals">Originals</a></li>
+                <li><a href="#sketchbook">Sketchbook</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#illustrations">Illustrations</a></li>
+                <li><a href="#contacts">Contact</a></li>
             </ul>
         </nav>
-    </header><!-- end of navigation-->
+    </header>end of navigation
 
 <main>
-
     <div class="content" id="landing-screen">
         <h1>Rachael Smith Art</h1>
         <p>Welcome.</p>
-    </div><!-- end of landing-screen-->
+        <div class="split-slideshow">
+            <div class="slideshow">
+                <div class="slider">
+                    <div class="item">
+                        <img src="img/highland.jpg" />
+                    </div>
+                    <div class="item">
+                        <img src="img/arbroath.png" />
+                    </div>
+                    <div class="item">
+                        <img src="img/kettle.jpg" />
+                    </div>
+                    <div class="item">
+                        <img src="img/edinburgh-park.jpg" />
+                    </div>
+                </div>
+            </div>
+            <div class="slideshow-text">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </div>
+      </div><!-- End of landing-screen -->
 
-    <div class="content" id="home-screen">
+    <div class="content" id="about">
         <section class="about">
             <h1>About</h1>
             <p>Hi, I'm Rachael. I'm an artist and designer based in Scotland. I love to travel and sketch, and I'm always looking for new inspiration. I work as an architect, and I love to create illustrations in my free time. I hope you enjoy my work!</p>
@@ -75,9 +111,49 @@
                 </div>
             </div>
         </section>
-    </div><!-- end of home-screen-->
+    </div><!-- end of about-screen-->
 
-    <div class="content" id="contact-screen">
+    <div class="content" id="originals">
+        <h1>Originals</h1>
+        <p>Here are some of my original pieces. I hope you enjoy them!</p>
+        <!-- <div class="gallery">
+            <img src="img/forbidden-city.jpg" alt="Forbidden City" />
+            <img src="img/sketch.jpg" alt="Sketch" />
+            <img src="img/highland.jpg" alt="Highland Cow" />
+        </div> -->
+    </div><!-- end of originals-screen-->
+
+    <div class="content" id="sketchbook">
+        <h1>Sketchbook</h1>
+        <p>Here are some of my sketches from my travels around the world.</p>
+        <!-- <div class="gallery">
+            <img src="img/forbidden-city.jpg" alt="Forbidden City" />
+            <img src="img/sintra-sketch.png" alt="Sintra" />
+            <img src="img/sketch.jpg" alt="Sketch" />
+        </div> -->
+    </div><!-- end of sketchbook-screen-->
+
+    <div class="content" id="architecture">
+        <h1>Architecture</h1>
+        <p>Here are some of my architectural sketches and renders.</p>
+        <!-- <div class="gallery">
+            <img src="img/sketch.jpg" alt="Sketch" />
+            <img src="img/plan-view.jpg" alt="Plan View" />
+            <img src="img/section.jpg" alt="Section" />
+        </div> -->
+    </div><!-- end of architecture-screen-->
+
+    <div class="content" id="illustrations">
+        <h1>Illustrations</h1>
+        <p>Here are some of my personal illustrations.</p>
+        <!-- <div class="gallery">
+            <img src="img/highland.jpg" alt="Highland Cow" />
+            <img src="img/scottish-sketches.jpg" alt="Scottish Sketches" />
+            <img src="img/illustration.jpg" alt="Illustration" />
+        </div> -->
+    </div><!-- end of illustrations-screen-->
+
+    <div class="content" id="contacts">
         <h1>Contact</h1>
         <p>For more information, please contact me at yadda yadda...</p>
     </div><!-- end of contact-screen-->
@@ -86,9 +162,9 @@
 <footer>
     <p>&copy; 2025 Rachael Smith</p>
 </footer>
-
 <!-- Scripts -->
 <script src="scripts/scroll.js"></script>
 <script src="scripts/detect-scroll.js"></script>
+<script src="scripts/slider.js"></script>
 </body>
 </html>
