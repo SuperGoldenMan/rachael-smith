@@ -17,6 +17,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <!-- slider script -->
     <script src="scripts/slider.js"></script>
+    <script src="scripts/modal.js"></script>
+
 </head>
 <body>
     <header class="navbar">
@@ -29,7 +31,7 @@
                 <li><a href="#sketchbook">Sketchbook</a></li>
                 <li><a href="#architecture">Architecture</a></li>
                 <li><a href="#illustrations">Illustrations</a></li>
-                <li><a href="#contacts">Contact</a></li>
+                <!-- <li><a href="#contacts">Contact</a></li> -->
             </ul>
         </nav>
     </header>end of navigation
@@ -121,47 +123,58 @@
     <div class="content" id="originals">
         <h2>Originals</h2>
         <p>Here are some of my original pieces. I hope you enjoy them!</p>
-        <!-- <div class="gallery">
-            <img src="img/forbidden-city.jpg" alt="Forbidden City" />
-            <img src="img/sketch.jpg" alt="Sketch" />
-            <img src="img/highland.jpg" alt="Highland Cow" />
-        </div> -->
+        <div class="layout-container">
+            <img width="300px" src="img/arbroath.png" alt="Arbroath">
+            <img width="300px" src="img/postcard.png" alt="Postcard">
+            <img width="300px" src="img/seville-painting.png" alt="Seville">
+            <img width="300px" src="img/sintra-sketch.png" alt="Sintra Sketch">
+            <img width="300px" src="img/st-andrews-sketches.jpg" alt="St. Andrews Sketches">
+        </div><!-- end of container-->
+
     </div><!-- end of originals-screen-->
 
     <div class="content" id="sketchbook">
         <h2>Sketchbook</h2>
         <p>Here are some of my sketches from my travels around the world.</p>
-        <!-- <div class="gallery">
-            <img src="img/forbidden-city.jpg" alt="Forbidden City" />
-            <img src="img/sintra-sketch.png" alt="Sintra" />
-            <img src="img/sketch.jpg" alt="Sketch" />
-        </div> -->
-    </div><!-- end of sketchbook-screen-->
+            <img width="300px" src="img/beijing-hutongs.jpg" alt="Beijing Hutongs">
+            <img width="300px" src="img/forbidden-city.jpg" alt="Forbidden City">
+            <img width="300px" src="img/gate-to-tongwen.jpg" alt="Gate to Tongwen">
+            <img width="300px" src="img/great-wall.jpg" alt="Great Wall">
+            <img width="300px" src="img/guling-town.jpg" alt="Guling Town">
+            <img width="300px" src="img/lushan-mountain.jpg" alt="Lushan Mountain">
+    </div><!-- end of sketchbook -->
 
+        
+`
     <div class="content" id="architecture">
         <h2>Architecture</h2>
         <p>Here are some of my architectural sketches and renders.</p>
-        <!-- <div class="gallery">
-            <img src="img/sketch.jpg" alt="Sketch" />
-            <img src="img/plan-view.jpg" alt="Plan View" />
-            <img src="img/section.jpg" alt="Section" />
-        </div> -->
+        <div class="layout-container">
+            <img width="300px" src="img/4-sandport-place.jpg" alt="4 Sandport Place">
+            <img width="300px" src="img/edinburgh-park.jpg" alt="Edinburgh">
+            <img width="300px" src="img/plan-view.jpg" alt="Plans">
+            <img width="300px" src="img/red.jpg" alt="Red">
+            <img width="300px" src="img/sketch.jpg" alt="Dundee">
+            <img width="300px" src="img/lines.jpg" alt="Power Lines">
+        </div><!-- end of container-->
+
     </div><!-- end of architecture-screen-->
 
     <div class="content" id="illustrations">
         <h2>Illustrations</h2>
         <p>Here are some of my personal illustrations.</p>
-        <!-- <div class="gallery">
-            <img src="img/highland.jpg" alt="Highland Cow" />
-            <img src="img/scottish-sketches.jpg" alt="Scottish Sketches" />
-            <img src="img/illustration.jpg" alt="Illustration" />
-        </div> -->
+        <div class="layout-container">
+            <img width="300px" src="img/highland.jpg" alt="Highland Cow">
+            <img width="300px" src="img/kettle.jpg" alt="Kettle">
+            <img width="300px" src="img/scottish-sketches.jpg" alt="Scottish Collection">
+        </div><!-- end of container-->
+
     </div><!-- end of illustrations-screen-->
 
-    <div class="content" id="contacts">
+    <!-- <div class="content" id="contacts">
         <h2>Contact</h2>
         <p>For more information, please contact me at yadda yadda...</p>
-    </div><!-- end of contact-screen-->
+    </div>end of contact-screen -->
 </main>
 
 <footer>
@@ -170,5 +183,14 @@
 <!-- Scripts -->
 <script src="scripts/scroll.js"></script>
 <script src="scripts/detect-scroll.js"></script>
+<script src="scripts/lightbox.js"></script>
+<!-- Global Lightbox (placed once at the end of the body) -->
+<div id="lightbox" class="lightbox hidden">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" src="" alt="">
+    <div class="lightbox-title"></div>
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+</div>
 </body>
 </html>
