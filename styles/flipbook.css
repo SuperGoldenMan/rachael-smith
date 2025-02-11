@@ -10,7 +10,7 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    color: gold;
+    color: black;
 }
 
 
@@ -48,7 +48,7 @@
 .front {
     z-index: 1;
     backface-visibility: hidden;
-    border-left: 3px solid #FCF4E9;
+    border-left: 3px solid #fcf4e9;
 }
 
 .back {
@@ -117,7 +117,7 @@ i {
 }
 
 #f1, #b7 {
-    background-color: #670A0A;
+    background-color: #9b7e58e8;
 }
 
 
