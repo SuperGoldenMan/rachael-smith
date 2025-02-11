@@ -1,19 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Caveat:wght@400..700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dancing+Script:wght@400..700&family=Fjalla+One&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Great+Vibes&family=Indie+Flower&family=Lora:ital,wght@0,400..700;1,400..700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&display=swap');
+/* ======== General Styling ======== */
 .journal {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    font-family: sans-serif;
-    background-color: powderblue;
+    font-size: 2rem;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: gold;
 }
 
 
 /* Book */
 .book {
+    margin-top: 12vh;
     position: relative;
-    width: 450px;
-    height: 635px;
+    width: 56vh;
+    height: 80vh;
     transition: transform 0.5s;
 }
 
@@ -42,7 +48,7 @@
 .front {
     z-index: 1;
     backface-visibility: hidden;
-    border-left: 3px solid powderblue;
+    border-left: 3px solid #FCF4E9;
 }
 
 .back {
@@ -74,6 +80,7 @@
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
+    margin-top: 12vh;
 }
 
 .right {
@@ -109,19 +116,39 @@ i {
     color: gray;
 }
 
+#f1, #b7 {
+    background-color: #670A0A;
+}
+
+
 /* Paper stack order */
 #p1 {
-    z-index: 3;
+    z-index: 7;
 }
 
 #p2 {
-    z-index: 2;
+    z-index: 6;
 }
 
 #p3 {
-    z-index: 1;
+    z-index: 5;
 }
 
+#p4 {
+    z-index: 4;
+}
+
+#p5 {
+    z-index: 3;
+}
+
+#p6 {
+    z-index: 2;
+}
+
+#p7 {
+    z-index: 1;
+}
 .paper img{
     object-fit: cover;
     width: 100%;
