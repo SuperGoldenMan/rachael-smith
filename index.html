@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rachael's Art & Design</title>
     <!-- my style sheets -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/accordion.css">
     <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/flipbook.css">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Slick CSS (for styling) -->
@@ -18,7 +20,8 @@
     <!-- slider script -->
     <script src="scripts/slider.js"></script>
     <!-- book script -->
-     <script src="scripts/book.js"></script>
+    <script src="scripts/flip.js" defer></script>
+    <!-- <script src="https://kit.fontawesome.com/99b3298177.js" crossorigin="anonymous"></script> -->
 </head>
 <body>
     <header class="navbar">
@@ -127,17 +130,69 @@
         <hr>
     </div>end of originals-screen -->
 
-    <div class="content" id="travel-sketches">
-        <h2>Travel Journal</h2>
-        <p>Here are some of my sketches from my travels around the world.</p>
-        <div class="page-flip-container">
-          <div class="page" data-image="img/beijing-hutongs.jpg"></div>
-          <div class="page" data-image="img/forbidden-city.jpg"></div>
-          <div class="page" data-image="img/gate-to-tongwen.jpg"></div>
-          <div class="page" data-image="img/great-wall.jpg"></div>
-          <div class="page" data-image="img/guling-town.jpg"></div>
-          <div class="page" data-image="img/lushan-mountain.jpg"></div>
-        </div>
+    <div class="journal" id="travel-sketches">
+        <!-- <h2>Travel Journal</h2>
+        <p>Here are some of my sketches from my travels around the world.</p> -->
+        
+        <!-- <div id="book-wrapper"> -->
+        <button id="prev-btn">
+            <i class="arrow left"></i>
+        </button>
+
+
+        <div id="book" class="book">
+            <!-- Paper 1 -->
+            <div id="p1" class="paper">
+                <div class="front">
+                    <div id="f1" class="front-content">
+                        <h1>Travel Journal</h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b1" class="back-content">
+                        <img src="img/beijing-hutongs.jpg">
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 2 -->
+            <div id="p2" class="paper">
+                <div class="front">
+                    <div id="f2" class="front-content">
+                        <h1>Front 2</h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b2" class="back-content">
+                        <h1>Back 2</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 3 -->
+            <div id="p3" class="paper">
+                <div class="front">
+                    <div id="f3" class="front-content">
+                        <h1>Front 3</h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b3" class="back-content">
+                        <h1>Back 3</h1>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end of book -->
+
+        <button id="next-btn">
+            <i class="arrow right"></i>
+        </button>
+        <!-- </div>end of book wrapper -->
+                <!-- <img class="page" id="one" src="img/beijing-hutongs.jpg">
+                <img class="page" id="two" src="img/forbidden-city.jpg">
+                <img> class="page" id="three" src="img/gate-to-tongwen.jpg">
+                <img class="page" id="four" src="img/great-wall.jpg">
+                <img class="page" id="five" src="img/guling-town.jpg">
+                <img class="page" id="six" src="img/lushan-mountain.jpg"> -->
+        
     </div>
       
 
