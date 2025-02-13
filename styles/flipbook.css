@@ -51,6 +51,10 @@
     border-left: 3px solid #fcf4e9;
 }
 
+.cover {
+    border-left: 3px solid #C2B9A7;
+}
+
 .back {
     z-index: 0;
 }
@@ -117,7 +121,7 @@ i {
 }
 
 #f1, #b7 {
-    background-color: #9b7e58e8;
+    background-color: #C2B9A7;
 }
 
 
