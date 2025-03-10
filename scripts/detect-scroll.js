@@ -1,13 +1,16 @@
-let lastScrollY = window.scrollY;
-const navbar = document.querySelector(".navbar");
-
-window.addEventListener("scroll", () => {
-    if (window.scrollY > lastScrollY) {
-        // Scrolling down
-        navbar.classList.add("hidden");
-    } else {
-        // Scrolling up
-        navbar.classList.remove("hidden");
-    }
-    lastScrollY = window.scrollY;
-});
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector(".navbar");
+    const scrollThreshold = window.innerHeight/6;
+  
+    // Initially hide the navbar
+    navbar.style.transform = "translateY(-100%)";
+    navbar.style.transition = "transform 0.3s ease-in-out";
+  
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > scrollThreshold) {
+        navbar.style.transform = "translateY(0)";
+      } else {
+        navbar.style.transform = "translateY(-100%)";
+      }
+    });
+  });

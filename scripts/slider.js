@@ -26,6 +26,8 @@ $('.slideshow-left').slick({
   autoplaySpeed: 3000,
   focusOnSelect: false,
   accessibility: false,
+  pauseOnHover: false,
+  pauseOnFocus: false,
   cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
 });
 

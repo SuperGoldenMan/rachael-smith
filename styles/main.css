@@ -24,7 +24,7 @@ body.no-scroll {
     justify-content: center;
     z-index: 1000;
     box-shadow: 0 4px 10px slategray;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -71,6 +71,7 @@ body.no-scroll {
     text-align: center;
     box-sizing: border-box;
     padding-top: 2vh;
+    scroll-margin: 12vh;
 }
 
 .content h2 {
